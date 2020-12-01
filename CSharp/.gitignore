@@ -1,0 +1,12 @@
+.vs/
+[Pp]ackages/
+[Bb]in/
+[Oo]bj/
+[Rr]elease
+[Pp[ublish/
+[Tt]est[Rr]esults/
+
+*.suo
+*.user
+*.cache
+*.pubxml
