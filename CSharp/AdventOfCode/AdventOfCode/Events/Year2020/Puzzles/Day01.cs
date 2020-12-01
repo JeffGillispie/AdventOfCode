@@ -5,7 +5,7 @@
 
     public class Day01 : Puzzle, IPuzzle
     {
-        public override string GetAnswerForPart1()
+        public string GetAnswerForPart1()
         {
             var inputValues = this.Input.Split('\n').Where(x => !String.IsNullOrEmpty(x)).Select(x => int.Parse(x.Trim())).ToArray();
             
@@ -31,7 +31,7 @@
             return null;
         }
 
-        public override string GetAnswerForPart2()
+        public string GetAnswerForPart2()
         {
             var inputValues = this.Input.Split('\n').Where(x => !String.IsNullOrEmpty(x)).Select(x => int.Parse(x.Trim())).ToArray();
 
