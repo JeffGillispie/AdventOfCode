@@ -12,8 +12,8 @@
             yield return new object[] { 
                 new Day01 { 
                     Instructions = String.Join("\n", new string[] { 
-                        "Part 1 Expected = 514579", 
-                        "Part 2 Expected = 241861950" 
+                        "Part 1: Your puzzle answer was 514579.", 
+                        "Part 2: Your puzzle answer was 241861950." 
                     }),
                     Input = String.Join("\n", new int[] { 
                         1721, 
