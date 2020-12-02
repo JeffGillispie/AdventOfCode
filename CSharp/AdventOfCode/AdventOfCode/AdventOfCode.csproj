@@ -41,12 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\Year2019\Puzzles\Day01.cs" />
     <Compile Include="IPuzzle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Events\Year2020\Puzzles\Day01.cs" />
     <Compile Include="Puzzle.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Events\Year2019\Input\Day01.txt" />
+    <EmbeddedResource Include="Events\Year2019\Instructions\Day01.txt" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Events\Year2020\Input\Day01.txt" />
     <EmbeddedResource Include="Events\Year2020\Instructions\Day01.txt" />

@@ -14,9 +14,11 @@
         }
 
         [Theory]
+        [ClassData(typeof(Events.Year2019.TestDataForDay01))]
         [ClassData(typeof(Events.Year2020.TestDataForDay01))]
         public void Test(IPuzzle puzzle)
         {
+            this.output.WriteLine($"Test for {puzzle.GetType().Namespace}.{puzzle.GetType().Name}");
             this.output.WriteLine(puzzle.Instructions);
             var part1Answer = puzzle.GetAnswerForPart1();
             var part2Answer = puzzle.GetAnswerForPart2();
