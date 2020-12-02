@@ -1,6 +1,5 @@
 ﻿namespace AdventOfCode.Tests
 {
-    using System.Linq;
     using System.Text.RegularExpressions;
     using AdventOfCode;
     using Xunit;
@@ -19,6 +18,7 @@
         [ClassData(typeof(Events.Year2019.TestDataForDay01))]
         [ClassData(typeof(Events.Year2019.TestDataForDay02))]
         [ClassData(typeof(Events.Year2020.TestDataForDay01))]
+        [ClassData(typeof(Events.Year2020.TestDataForDay02))]
         public void Test(IPuzzle puzzle)
         {
             var matches = Regex.Matches(puzzle.Instructions, "Your puzzle answer was (.+)\\.\\s?");
