@@ -5,12 +5,6 @@
 
     public class Day02 : Puzzle, IPuzzle
     {
-        public string GetAnswerForPart1()
-        {
-            var inputValues = this.Input.Split(',').Where(x => !String.IsNullOrEmpty(x)).Select(x => int.Parse(x.Trim())).ToArray();
-            return this.GetAnswerForPart1(inputValues, 12, 02).ToString();
-        }
-
         public int GetAnswerForPart1(int[] input, int noun, int verb)
         {
             int[] data = new int[input.Length];
@@ -39,9 +33,15 @@
             return data[0];
         }
 
-        public string GetAnswerForPart2()
+        public string GetAnswerForPart1()
         {
             var inputValues = this.Input.Split(',').Where(x => !String.IsNullOrEmpty(x)).Select(x => int.Parse(x.Trim())).ToArray();
+            return this.GetAnswerForPart1(this.Input.ParseDelimitedToIntegers().ToArray(), 12, 02).ToString();
+        }
+                
+        public string GetAnswerForPart2()
+        {
+            var inputValues = this.Input.ParseDelimitedToIntegers().ToArray();                
 
             foreach (var noun in Enumerable.Range(0, 100))
             {

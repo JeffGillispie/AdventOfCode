@@ -7,7 +7,7 @@
     {
         public string GetAnswerForPart1()
         {
-            var inputValues = this.Input.Split('\n').Where(x => !String.IsNullOrEmpty(x)).Select(x => int.Parse(x.Trim())).ToArray();
+            var inputValues = this.Input.ParseLinesToIntegers().ToArray();
             
             for (int indexNum1 = 0; indexNum1 < inputValues.Length; indexNum1++)
             {
@@ -33,7 +33,7 @@
 
         public string GetAnswerForPart2()
         {
-            var inputValues = this.Input.Split('\n').Where(x => !String.IsNullOrEmpty(x)).Select(x => int.Parse(x.Trim())).ToArray();
+            var inputValues = this.Input.ParseLinesToIntegers().ToArray();
 
             for (int indexNum1 = 0; indexNum1 < inputValues.Length; indexNum1++)
             {

@@ -7,8 +7,7 @@
     {
         public string GetAnswerForPart1()
         {
-            var inputValues = this.Input.Split('\n').Where(x => !String.IsNullOrEmpty(x)).Select(x => x.Trim());
-            return inputValues.Count(entry => {
+            return this.Input.ParseLines().Count(entry => {
                 var values = entry.Split(new char[] { '-', ' ' }).Select(c => c.TrimEnd(':')).ToArray();
                 var minOccurances = int.Parse(values[0]);
                 var maxOccurances = int.Parse(values[1]);
@@ -21,8 +20,7 @@
 
         public string GetAnswerForPart2()
         {
-            var inputValues = this.Input.Split('\n').Where(x => !String.IsNullOrEmpty(x)).Select(x => x.Trim());
-            return inputValues.Count(entry => {
+            return this.Input.ParseLines().Count(entry => {
                 var values = entry.Split(new char[] { '-', ' ' }).Select(c => c.TrimEnd(':')).ToArray();
                 var position1 = int.Parse(values[0]);
                 var position2 = int.Parse(values[1]);

@@ -7,17 +7,15 @@
     {
         public string GetAnswerForPart1()
         {
-            var inputValues = this.Input.Split('\n').Where(x => !String.IsNullOrEmpty(x)).Select(x => int.Parse(x.Trim()));
-            return inputValues.Sum(x => (int)(Math.Floor(x / 3.0) - 2)).ToString();            
+            return this.Input.ParseLinesToIntegers().Sum(x => (int)(Math.Floor(x / 3.0) - 2)).ToString();            
         }
 
         public string GetAnswerForPart2()
         {
-            var inputValues = this.Input.Split('\n').Where(x => !String.IsNullOrEmpty(x)).Select(x => int.Parse(x.Trim()));
             var totalFuel = 0;
             Func<int, int> calculateFuel = (mass) => (int)(Math.Floor(mass / 3.0) - 2);
 
-            foreach (var value in inputValues)
+            foreach (var value in this.Input.ParseLinesToIntegers())
             {
                 var fuel = value;                
 
