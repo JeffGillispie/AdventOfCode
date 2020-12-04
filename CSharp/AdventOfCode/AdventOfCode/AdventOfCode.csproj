@@ -45,6 +45,7 @@
     <Compile Include="Events\Year2019\Puzzles\Day02.cs" />
     <Compile Include="Events\Year2020\Puzzles\Day02.cs" />
     <Compile Include="Events\Year2020\Puzzles\Day03.cs" />
+    <Compile Include="Events\Year2020\Puzzles\Day04.cs" />
     <Compile Include="IPuzzle.cs" />
     <Compile Include="StringParseExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +75,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Events\Year2020\Instructions\Day03.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Events\Year2020\Input\Day04.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Events\Year2020\Instructions\Day04.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
