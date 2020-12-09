@@ -5,15 +5,30 @@
     using Xunit;
     using Xunit.Abstractions;
 
+    /// <summary>
+    /// The puzzle tester.
+    /// </summary>
     public class PuzzleTester
     {
+        /// <summary>
+        /// The test output helper.
+        /// </summary>
         protected readonly ITestOutputHelper output;
         
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PuzzleTester"/> class.
+        /// </summary>
+        /// <param name="output">The test output helper.</param>
         public PuzzleTester(ITestOutputHelper output)
         {
             this.output = output;
         }
 
+        /// <summary>
+        /// Tests that the puzzle answers in the instructions matches the answers produced by the puzzle methods.
+        /// Skips the answer validation if the instructions specify an answer of 'n/a'.
+        /// </summary>
+        /// <param name="puzzle">The puzzle to test.</param>
         [Theory]
         [ClassData(typeof(Events.Year2019.TestDataForDay01))]
         [ClassData(typeof(Events.Year2019.TestDataForDay02))]
@@ -22,7 +37,7 @@
         [ClassData(typeof(Events.Year2020.TestDataForDay03))]
         [ClassData(typeof(Events.Year2020.TestDataForDay04))]
         [ClassData(typeof(Events.Year2020.TestDataForDay05))]
-        public void Test(IPuzzle puzzle)
+        public void TestPuzzle(IPuzzle puzzle)
         {
             var matches = Regex.Matches(puzzle.Instructions, "Your puzzle answer was (.+)\\.\\s?");
             var expectedPart1 = matches[0].Groups[1].Value;
