@@ -3,8 +3,7 @@
     using System;
     using System.Collections.Generic;
     using AdventOfCode.Events.Year2020.Puzzles;
-    using Xunit;
-
+    
     public class TestDataForDay04 : PuzzleTestData
     {
         public override IEnumerator<object[]> GetEnumerator()

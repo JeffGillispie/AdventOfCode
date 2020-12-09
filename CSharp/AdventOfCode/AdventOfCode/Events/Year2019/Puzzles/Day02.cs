@@ -35,7 +35,6 @@
 
         public string GetAnswerForPart1()
         {
-            var inputValues = this.Input.Split(',').Where(x => !String.IsNullOrEmpty(x)).Select(x => int.Parse(x.Trim())).ToArray();
             return this.GetAnswerForPart1(this.Input.ParseDelimitedToIntegers().ToArray(), 12, 02).ToString();
         }
                 
