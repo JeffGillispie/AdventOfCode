@@ -64,6 +64,7 @@
     <Compile Include="Events\Year2020\TestDataForDay03.cs" />
     <Compile Include="Events\Year2020\TestDataForDay04.cs" />
     <Compile Include="Events\Year2020\TestDataForDay05.cs" />
+    <Compile Include="Events\Year2020\TestDataForDay06.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PuzzleTestData.cs" />
     <Compile Include="PuzzleTester.cs" />
