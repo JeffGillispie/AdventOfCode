@@ -7,7 +7,7 @@
     {
         public string GetAnswerForPart1()
         {
-            var inputValues = this.Input.ParseLinesToIntegers().ToArray();
+            var inputValues = this.Input.ParseLines().ToIntegers().ToArray();
             
             for (int indexNum1 = 0; indexNum1 < inputValues.Length; indexNum1++)
             {
@@ -33,7 +33,7 @@
 
         public string GetAnswerForPart2()
         {
-            var inputValues = this.Input.ParseLinesToIntegers().ToArray();
+            var inputValues = this.Input.ParseLines().ToIntegers().ToArray();
 
             for (int indexNum1 = 0; indexNum1 < inputValues.Length; indexNum1++)
             {

@@ -9,11 +9,12 @@
     /// </summary>
     public static class StringParseExtensions
     {
+
         /// <summary>
         /// Parse delimited data in a string.
         /// </summary>
         /// <param name="input">The string to parse.</param>
-        /// <param name="separator">The delimiter that separates the values.</param>
+        /// <param name="separator">The delimiter that separate the values.</param>
         /// <param name="removeEmptyValues">Indicates if empty values should be removed.</param>
         /// <param name="trimWhitespace">Indicates if whitespace should be trimmed.</param>
         /// <returns>Returns a collection of strings.</returns>
@@ -25,15 +26,14 @@
         }
 
         /// <summary>
-        /// Parse delimited data in a string to integers.
+        /// Parse groups of data in a string separated by a blank line.
         /// </summary>
-        /// <param name="input">The string to parse.</param>
-        /// <param name="separator">The delimiter separating the values in the string.</param>
-        /// <returns>Returns a collection of integers.</returns>
-        public static IEnumerable<int> ParseDelimitedToIntegers(this string input, char separator = ',')
+        /// <param name="input">The string to parse.</param>        
+        /// <param name="splitOptions">The string split options to use.</param>
+        /// <returns>Returns a collection of strings.</returns>
+        public static IEnumerable<string> ParseGroups(this string input, StringSplitOptions splitOptions = StringSplitOptions.RemoveEmptyEntries)
         {
-            return input.ParseDelimited(separator, removeEmptyValues: true, trimWhitespace: true)
-                .Select(x => int.Parse(x));
+            return input.Split(new string[] { "\n\n", "\r\n\r\n" }, splitOptions);
         }
 
         /// <summary>
@@ -49,14 +49,13 @@
         }
 
         /// <summary>
-        /// Parse a string of values separated by newlines into integers.
+        /// Convert a collection of strings to integers.
         /// </summary>
-        /// <param name="input">The string to parse.</param>
+        /// <param name="values">The values to convert.</param>
         /// <returns>Returns a collection of integers.</returns>
-        public static IEnumerable<int> ParseLinesToIntegers(this string input)
+        public static IEnumerable<int> ToIntegers(this IEnumerable<string> values)
         {
-            return input.ParseLines(removeEmptyValues: true, trimWhitespace: true)
-                .Select(x => int.Parse(x));
+            return values.Select(x => int.Parse(x));
         }
     }
 }

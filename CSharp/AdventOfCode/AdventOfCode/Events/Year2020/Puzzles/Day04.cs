@@ -9,17 +9,13 @@
     {
         public string GetAnswerForPart1()
         {
-            var passports = this.Input
-                .Split(new string[] { "\n\n", "\r\n\r\n" }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(x => new Passport(x));
+            var passports = this.Input.ParseGroups().Select(x => new Passport(x));
             return passports.Count(x => x.HasRequiredFields).ToString();
         }
 
         public string GetAnswerForPart2()
         {
-            var passports = this.Input
-                .Split(new string[] { "\n\n", "\r\n\r\n" }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(x => new Passport(x));
+            var passports = this.Input.ParseGroups().Select(x => new Passport(x));
             return passports.Count(x => x.HasValidValues).ToString();
         }
 

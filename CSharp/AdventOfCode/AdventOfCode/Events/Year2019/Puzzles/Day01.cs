@@ -7,7 +7,7 @@
     {
         public string GetAnswerForPart1()
         {
-            return this.Input.ParseLinesToIntegers().Sum(x => (int)(Math.Floor(x / 3.0) - 2)).ToString();            
+            return this.Input.ParseLines().ToIntegers().Sum(x => (int)(Math.Floor(x / 3.0) - 2)).ToString();            
         }
 
         public string GetAnswerForPart2()
@@ -15,7 +15,7 @@
             var totalFuel = 0;
             Func<int, int> calculateFuel = (mass) => (int)(Math.Floor(mass / 3.0) - 2);
 
-            foreach (var value in this.Input.ParseLinesToIntegers())
+            foreach (var value in this.Input.ParseLines().ToIntegers())
             {
                 var fuel = value;                
 
