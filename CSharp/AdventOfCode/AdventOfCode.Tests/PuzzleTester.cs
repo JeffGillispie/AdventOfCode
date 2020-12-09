@@ -38,6 +38,7 @@
         [ClassData(typeof(Events.Year2020.TestDataForDay04))]
         [ClassData(typeof(Events.Year2020.TestDataForDay05))]
         [ClassData(typeof(Events.Year2020.TestDataForDay06))]
+        [ClassData(typeof(Events.Year2020.TestDataForDay07))]
         public void TestPuzzle(IPuzzle puzzle)
         {
             var matches = Regex.Matches(puzzle.Instructions, "Your puzzle answer was (.+)\\.\\s?");

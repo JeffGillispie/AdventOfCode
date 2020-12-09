@@ -9,15 +9,15 @@
     public abstract class PuzzleTestData : IEnumerable<object[]>
     {
         /// <summary>
-        /// The collection of data to test.
+        /// An <see cref="IEnumerator"/> object that can be used to iterate through the collection of test data.
         /// </summary>
-        /// <returns>Returns a collection of test parameters as an object array.</returns>
+        /// <returns>Returns an enumerator that iterates through the collection of test data.</returns>
         public abstract IEnumerator<object[]> GetEnumerator();
 
         /// <summary>
-        /// The collection of data to test.
+        /// An <see cref="IEnumerator"/> object that can be used to iterate through the collection of test data.
         /// </summary>
-        /// <returns>Returns a collection of test parameters as an object array.</returns>
+        /// <returns>Returns an enumerator that iterates through the collection of test data.</returns>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }
